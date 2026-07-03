@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demandable Web — The decentralized blockchain-powered marketplace for professional services. Open-source, peer-to-peer, trust-driven.">
+  <meta name="theme-color" content="#060610">
+  <title>Demandable Web — Decentralized Marketplace for Professional Services</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- Particle Background -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- ===================== HOME PAGE ===================== -->
+  <div id="home" class="page-section active">
+    <!-- Hero Carousel -->
+    <section class="hero-carousel" role="region" aria-label="Featured highlights">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="assets/img/carousel-1.jpg" alt="Futuristic blockchain marketplace — decentralized digital cityscape" loading="eager">
+          <div class="carousel-overlay">
+            <h2 class="masthead">Demandable Web</h2>
+            <p class="tagline">The decentralized marketplace that feels just like your favorite app. <strong>Simple on the surface, revolutionary under the hood.</strong></p>
+            <div class="carousel-cta">
+              <a href="#" class="dw-btn dw-btn-primary" data-page="core-features">Explore Core Edition</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/img/carousel-2.jpg" alt="Peer-to-peer trust and smart contract transparency" loading="lazy">
+          <div class="carousel-overlay">
+            <h2 class="masthead">Connect. Collaborate. Collect.</h2>
+            <p class="tagline">Complete transparency from the first click to the final payout. <strong>Your skills, your terms, our engine.</strong></p>
+            <div class="carousel-cta">
+              <a href="#" class="dw-btn dw-btn-outline" data-page="core-benefits">See the Benefits</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/img/carousel-3.jpg" alt="Community governance and tokenomics visualization" loading="lazy">
+          <div class="carousel-overlay">
+            <h2 class="masthead">Open-Source Trust</h2>
+            <p class="tagline">We open-sourced the trust so you can focus on the task. <strong>The open-source marketplace where everyone plays by the same rules.</strong></p>
+            <div class="carousel-cta">
+              <a href="#" class="dw-btn dw-btn-glass" data-page="download">Download Community Edition</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/img/carousel-4.jpg" alt="Blockchain security and privacy — ironclad protection" loading="lazy">
+          <div class="carousel-overlay">
+            <h2 class="masthead">Built for Privacy</h2>
+            <p class="tagline">Secure your agreements in blocks, not red tape. <strong>No middleman. No markups. Total privacy.</strong></p>
+            <div class="carousel-cta">
+              <a href="#" class="dw-btn dw-btn-primary" data-page="about-security">Learn About Security</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow prev" aria-label="Previous slide">&#8249;</button>
+      <button class="carousel-arrow next" aria-label="Next slide">&#8250;</button>
+      <div class="carousel-dots" role="tablist" aria-label="Carousel navigation">
+        <button class="carousel-dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+        <button class="carousel-dot" role="tab" aria-label="Slide 2"></button>
+        <button class="carousel-dot" role="tab" aria-label="Slide 3"></button>
+        <button class="carousel-dot" role="tab" aria-label="Slide 4"></button>
+      </div>
+    </section>
+
+    <!-- Home Taglines Section -->
+    <section class="dw-section" aria-labelledby="home-taglines-heading">
+      <h2 class="section-title" id="home-taglines-heading">Unlocking Fair Peer-to-Peer Services for Everyone, Everywhere</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">The basic building block for a fairer gig economy. <strong>Keep your data yours. Keep your money yours.</strong></p>
+      <p class="tagline">Code you can trust for work you can depend on. <strong>Ironclad security without the learning curve.</strong></p>
+    </section>
+
+    <!-- Quick Feature Preview -->
+    <section class="dw-section" aria-labelledby="home-features-heading">
+      <h2 class="section-title" id="home-features-heading">Why Demandable Web?</h2>
+      <hr class="dw-separator">
+      <div class="feature-grid">
+        <div class="feature-card glass grad-border glow-hover" role="article">
+          <span class="feature-icon icon-blue" aria-hidden="true">&#x26A1;</span>
+          <h3 class="grad-text">Blockchain Identity</h3>
+          <p>Verified service professionals through immutable blockchain credentials. No more guesswork about who's at your door.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover" role="article">
+          <span class="feature-icon icon-gold" aria-hidden="true">&#x2696;</span>
+          <h3 class="grad-text">Smart Contract Escrow</h3>
+          <p>Automated trust and payment through self-executing contracts. Funds held securely until the job is done right.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover" role="article">
+          <span class="feature-icon icon-green" aria-hidden="true">&#x2699;</span>
+          <h3 class="grad-text">AI-Powered Matching</h3>
+          <p>Precision pairing of service requests with verified professionals. Fair, intelligent, and bias-free by design.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover" role="article">
+          <span class="feature-icon icon-blue" aria-hidden="true">&#x1F512;</span>
+          <h3 class="grad-text">Decentralized Reputation</h3>
+          <p>Portable credibility you own and carry across every engagement. Your reputation works for you, not a platform.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover" role="article">
+          <span class="feature-icon icon-gold" aria-hidden="true">&#x1F4E1;</span>
+          <h3 class="grad-text">IoT Integration</h3>
+          <p>Predictive maintenance and automated service requests through smart home device triggers. Your home knows what it needs.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover" role="article">
+          <span class="feature-icon icon-green" aria-hidden="true">&#x1F5F3;</span>
+          <h3 class="grad-text">Community Governance</h3>
+          <p>Reputation-weighted voting, proposal systems, and elected dispute councils. The platform evolves with its people.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market Opportunity -->
+    <section class="dw-section" aria-labelledby="home-market-heading">
+      <h2 class="section-title" id="home-market-heading">A $1.1T Market Opportunity</h2>
+      <hr class="dw-separator">
+      <div class="benefit-grid">
+        <div class="benefit-card glass grad-border glow-hover" role="article">
+          <h3 class="grad-text">$600B+ Home Services</h3>
+          <p>A massive industry long exploited by middlemen and opaque pricing. We replace extraction with trust.</p>
+        </div>
+        <div class="benefit-card glass grad-border glow-hover" role="article">
+          <h3 class="grad-text">$227M Revenue Path</h3>
+          <p>Projected revenue within three years across marketplace fees, white-label licensing, franchise packages, and ERP SaaS.</p>
+        </div>
+        <div class="benefit-card glass grad-border glow-hover" role="article">
+          <h3 class="grad-text">Multi-Stream Resilience</h3>
+          <p>Marketplace fees, franchise licensing, data licensing, token utility — modular, scalable, and margin-rich revenue streams.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== CORE EDITION — FEATURES ===================== -->
+  <div id="core-features" class="page-section">
+    <section class="dw-section" aria-labelledby="features-heading">
+      <h2 class="section-title" id="features-heading">Core Edition — Features</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">Simple on the surface, revolutionary under the hood.</p>
+
+      <div class="feature-grid" style="margin-top:var(--space-lg);">
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-blue">&#x1F6E1;</span>
+          <h3 class="grad-text">Verified Identity & Credentialing</h3>
+          <p>Blockchain-based identity verification and credential validation protects homeowners and empowers professionals with portable, trusted profiles.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-gold">&#x1F4B0;</span>
+          <h3 class="grad-text">Smart Contract Escrow</h3>
+          <p>Self-executing contracts automate booking, payment, and dispute resolution. Fair pricing, timely completion, and quality assurance — all on-chain.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-green">&#x1F916;</span>
+          <h3 class="grad-text">AI-Driven Matching Engine</h3>
+          <p>Precision and fairness in every match. Our AI engine pairs homeowners with verified professionals based on skills, availability, and community reputation.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-blue">&#x1F4CA;</span>
+          <h3 class="grad-text">Decentralized Reputation System</h3>
+          <p>Ratings and reviews recorded on the blockchain create a reliable, transparent reputation score that professionals own and carry everywhere.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-gold">&#x1F4F1;</span>
+          <h3 class="grad-text">IoT-Triggered Service Requests</h3>
+          <p>Predictive maintenance through smart home device integration. Your IoT sensors detect issues and automatically initiate verified service requests.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-green">&#x1F5F3;</span>
+          <h3 class="grad-text">Community Governance Protocols</h3>
+          <p>Reputation-weighted voting, proposal endorsement thresholds, and an elected Dispute Resolution Council give every stakeholder a voice in platform evolution.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-blue">&#x1F310;</span>
+          <h3 class="grad-text">Zero-Knowledge UX Layer</h3>
+          <p>A built-in user-level experience selector provides a zero-blockchain, zero-crypto-knowledge interface. It looks, feels, and operates like any other app — no jargon required.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-gold">&#x1F4DD;</span>
+          <h3 class="grad-text">Custom Smart Contract Builder</h3>
+          <p>Point-and-click and AI-assisted interface for designing custom smart contracts based on individual pricing models, payment terms, and project scopes — no coding needed.</p>
+        </div>
+        <div class="feature-card glass grad-border glow-hover">
+          <span class="feature-icon icon-green">&#x26A1;</span>
+          <h3 class="grad-text">Scalable BaaS Architecture</h3>
+          <p>Blockchain-as-a-Service turnkey solution designed for white-label deployment across verticals: Home Services, Professional Services, Field Services, Freelance/Gig, and more.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== CORE EDITION — BENEFITS ===================== -->
+  <div id="core-benefits" class="page-section">
+    <section class="dw-section" aria-labelledby="benefits-heading">
+      <h2 class="section-title" id="benefits-heading">Core Edition — Benefits</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">Your skills, your terms, our engine.</p>
+
+      <div class="benefit-grid" style="margin-top:var(--space-lg);">
+        <div class="benefit-card glass grad-border glow-hover">
+          <h3 class="grad-text">For Homeowners</h3>
+          <p>Verified professionals at your door. Transparent pricing with no hidden fees. Smart escrow protects every dollar. Earn tokens for reviews, referrals, and governance participation.</p>
+        </div>
+        <div class="benefit-card glass grad-border glow-hover">
+          <h3 class="grad-text">For Service Professionals</h3>
+          <p>No more lead-generation exploitation. Keep what you earn. Stake tokens for priority visibility and dispute protection. Build a portable, blockchain-verified reputation you own forever.</p>
+        </div>
+        <div class="benefit-card glass grad-border glow-hover">
+          <h3 class="grad-text">For Franchise Partners</h3>
+          <p>Token-based access to platform modules, analytics dashboards, and branding assets. Deploy across verticals — Home, Legal, Medical, Civic — with a turnkey infrastructure.</p>
+        </div>
+        <div class="benefit-card glass grad-border glow-hover">
+          <h3 class="grad-text">For ERP & B2B Clients</h3>
+          <p>Earn tokens for data sharing and logistics optimization. Access premium APIs, analytics, and supply chain coordination tools. Scale with intention, not friction.</p>
+        </div>
+        <div class="benefit-card glass grad-border glow-hover">
+          <h3 class="grad-text">For the Community</h3>
+          <p>Reputation-weighted governance ensures every voice matters. Propose, vote, and shape the platform's future. Transparency is the default, not the exception.</p>
+        </div>
+        <div class="benefit-card glass grad-border glow-hover">
+          <h3 class="grad-text">For Privacy Advocates</h3>
+          <p>Zero-knowledge proofs protect personal identity. Public-private key cryptography ensures your data stays yours. Ironclad security without the learning curve.</p>
+        </div>
+      </div>
+
+      <!-- Token Distribution -->
+      <h3 class="section-title" style="margin-top:var(--space-2xl);">DWT Token Distribution</h3>
+      <hr class="dw-separator">
+      <div class="token-grid">
+        <div class="token-item glass grad-border">
+          <div class="token-pct grad-text">40%</div>
+          <div class="token-label">Community Rewards</div>
+        </div>
+        <div class="token-item glass grad-border">
+          <div class="token-pct grad-text">20%</div>
+          <div class="token-label">Founding Team</div>
+        </div>
+        <div class="token-item glass grad-border">
+          <div class="token-pct grad-text">15%</div>
+          <div class="token-label">Investors</div>
+        </div>
+        <div class="token-item glass grad-border">
+          <div class="token-pct grad-text">15%</div>
+          <div class="token-label">Franchise & Licensing</div>
+        </div>
+        <div class="token-item glass grad-border">
+          <div class="token-pct grad-text">10%</div>
+          <div class="token-label">Treasury Reserve</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== CORE EDITION — LICENSE ===================== -->
+  <div id="core-license" class="page-section">
+    <section class="dw-section" aria-labelledby="license-heading">
+      <h2 class="section-title" id="license-heading">Core Edition — License</h2>
+      <hr class="dw-separator thick">
+      <div class="content-block">
+        <p class="tagline">The open-source marketplace where everyone plays by the same rules.</p>
+        <h3 class="grad-text">Open Source at Heart</h3>
+        <p>Demandable Web Core Edition is released under an open-source license that ensures transparency, community contribution, and fair use for all stakeholders. Our code is publicly auditable, community-driven, and built on the principle that trust should never be proprietary.</p>
+
+        <h3 class="grad-text">Community Edition</h3>
+        <p>The Community Edition is freely available for individual service professionals, small teams, and community organizations. It includes the full peer-to-peer marketplace engine, smart contract templates, reputation system, and governance participation tools — at zero cost.</p>
+
+        <h3 class="grad-text">Enterprise & White-Label Licensing</h3>
+        <p>For organizations seeking branded deployments, custom integrations, and dedicated support, Demandable Web offers tiered licensing through our Blockchain-as-a-Service model. This includes vertical-specific deployments such as Home Services, Professional Services, Field Services, Freelance/Gig, and NP/NFP Fundraising platforms.</p>
+
+        <h3 class="grad-text">Franchise Model</h3>
+        <p>Our franchise model deploys into home, legal, medical, and civic verticals with turnkey infrastructure. Token-based access tiers unlock platform modules, analytics dashboards, and co-branded assets. Collaboration over competition is our strategic doctrine.</p>
+
+        <h3 class="grad-text">Regulatory Flexibility</h3>
+        <p>Optional token layers for jurisdictions with crypto restrictions. KYC/AML compliance built into staking and governance. Smart contract audits for all token logic. Real utility first — no speculative hype.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== FAQ ===================== -->
+  <div id="faqs" class="page-section">
+    <section class="dw-section" aria-labelledby="faq-heading">
+      <h2 class="section-title" id="faq-heading">Frequently Asked Questions</h2>
+      <hr class="dw-separator thick">
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is Demandable Web?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Demandable Web is a decentralized, blockchain-powered, AI-enhanced, IoT-integrated marketplace designed for professional services. It connects homeowners and service providers directly through smart contracts, eliminating middlemen and restoring trust, transparency, and autonomy to every transaction.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do I need crypto or blockchain knowledge to use it?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>No. Demandable Web features a built-in user-level experience selector that provides a zero-blockchain, zero-crypto-knowledge interface. It looks, feels, and operates like any other app. No jargon, no wallets to manage, no complexity. The blockchain runs silently under the hood.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does smart contract escrow work?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>When a service agreement is created, funds are held in a blockchain escrow smart contract. The funds are only released when the service has been satisfactorily completed, as verified by both parties. This eliminates payment disputes and protects both homeowners and professionals.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the DWT token?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>The Demandable Web Token (DWT) is a utility token that incentivizes platform participation, facilitates governance, enables staking for access and visibility, and rewards reputation and referrals. It is not a speculative instrument — it has real utility within the ecosystem.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How is my data and privacy protected?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Demandable Web uses zero-knowledge proofs and public-private key cryptography to protect your personal identity. Your data stays yours — period. Blockchain immutability ensures transparent records without exposing sensitive information. Ironclad security without the learning curve.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What markets does Demandable Web serve?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Initially targeting the $600B+ home services industry, Demandable Web is architected as a scalable BaaS turnkey solution. Vertical deployments include Home Services, Professional Services, Field Services, Freelance/Gig Services, NP/NFP Fundraising & Grant Services, and Personal Services.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the Community Edition?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>The Community Edition is the free, open-source version of Demandable Web. It includes the full peer-to-peer marketplace engine, smart contract templates, decentralized reputation system, and governance participation tools — available at zero cost for individuals, small teams, and community organizations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does community governance work?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Governance is reputation-weighted, meaning those who contribute most to the community have proportional influence. Any user can submit proposals, which require endorsement thresholds to advance. A Dispute Resolution Council is elected from top-rated users, and all governance actions are recorded on an immutable audit trail.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the roadmap?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Q1 2026: MVP launch with escrow and matching live. Q2 2026: Governance protocols and token simulation. Q3 2026: Token staking and referral rewards. Q4 2026: Franchise and ERP token utility rollout. 2027: Global expansion, supply chain integration, tokenized governance.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does Demandable Web differ from existing platforms?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Traditional platforms exploit trust — opaque pricing, exploitative lead-generation models, and centralized control with limited user influence. Demandable Web replaces extraction with trust: blockchain identity, AI matching, smart escrow, IoT integration, portable reputation, and community governance. No middleman. No markups. Total privacy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== DOWNLOAD COMMUNITY EDITION ===================== -->
+  <div id="download" class="page-section">
+    <section class="dw-section" aria-labelledby="download-heading">
+      <h2 class="section-title" id="download-heading">Download Center</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">Code you can trust for work you can depend on.</p>
+
+      <div class="download-grid" style="margin-top:var(--space-xl);">
+        <div class="download-card glass grad-border glow-hover" role="button" tabindex="0" aria-label="Download Community Edition">
+          <div class="dl-icon icon-green" aria-hidden="true">&#x2B07;</div>
+          <h3 class="grad-text">Community Edition</h3>
+          <p>Free, open-source full marketplace engine. Smart contracts, reputation, governance — everything you need to start.</p>
+          <a href="#" class="dw-btn dw-btn-primary" style="margin-top:var(--space-md);">Download Now</a>
+        </div>
+        <div class="download-card glass grad-border glow-hover" role="button" tabindex="0" aria-label="Download Spec Sheet">
+          <div class="dl-icon icon-blue" aria-hidden="true">&#x1F4C4;</div>
+          <h3 class="grad-text">Spec Sheet</h3>
+          <p>Complete technical specifications, architecture overview, and platform capabilities documentation.</p>
+          <a href="#" class="dw-btn dw-btn-glass" style="margin-top:var(--space-md);">Download PDF</a>
+        </div>
+        <div class="download-card glass grad-border glow-hover" role="button" tabindex="0" aria-label="Download User Guide">
+          <div class="dl-icon icon-gold" aria-hidden="true">&#x1F4D6;</div>
+          <h3 class="grad-text">User Guide</h3>
+          <p>Step-by-step guide for homeowners, service professionals, and franchise partners. Zero jargon, full clarity.</p>
+          <a href="#" class="dw-btn dw-btn-glass" style="margin-top:var(--space-md);">Download PDF</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== ABOUT DEMANDABLE WEB ===================== -->
+  <div id="about" class="page-section">
+    <section class="dw-section" aria-labelledby="about-heading">
+      <h2 class="section-title" id="about-heading">About Demandable Web</h2>
+      <hr class="dw-separator thick">
+
+      <div class="content-block">
+        <p class="tagline">Demandable Web is more than a platform — it's a movement to decentralize trust, empower users, and redefine service coordination.</p>
+
+        <h3 class="grad-text">Our Mission</h3>
+        <p>To build a smarter, fairer economy where trust is the currency, and value flows to those who create it. We are creating the world's first trust-driven marketplace — transparent, equitable, and owned by its users.</p>
+
+        <h3 class="grad-text">Behind the Name</h3>
+        <p>"Demandable" signifies that the platform fulfills the demands and needs of users in the professional services industry. "Web" highlights our web-based, accessible-from-anywhere foundation. Together, the name encapsulates our focus on meeting user demands through cutting-edge decentralized technology, strong market positioning, and a memorable, distinctive identity.</p>
+
+        <h3 class="grad-text">The Problem We Solve</h3>
+        <p>One in five home service transactions ends in dispute or fraud. Providers lose up to half their earnings to lead-generation platforms. Users face no transparency, no accountability, and no ownership. Traditional service platforms exploit trust — Demandable Web restores it.</p>
+
+        <h3 class="grad-text">Our Approach</h3>
+        <p>At the intersection of blockchain, AI, and community, Demandable Web combines blockchain identity verification, AI-powered matching, smart contract escrow, IoT confirmation, and a reputation engine. Every interaction builds trust. Every action earns value. We replace middlemen with trust, transparency, and community governance.</p>
+
+        <h3 class="grad-text">Culture: Collaboration Over Competition</h3>
+        <p>We lead with empathy, not hierarchy. Our strategic doctrine of Collaboration Over Competition identifies emerging technologies and existing operations as potential collaborative partners rather than adversaries. We seek mutual benefit, co-marketing opportunities, technical integration, and shared industry standards — because a rising tide lifts all boats.</p>
+
+        <h3 class="grad-text">Founder</h3>
+        <p>Demandable Web was founded by Don J. Baldwin, CEO and Director of Innovation, whose diverse career spanning marketing, advertising, brand management, and emerging technology has equipped him with a unique perspective on market dynamics and the vision to revolutionize the professional services marketplace through blockchain innovation.</p>
+
+        <!-- Roadmap -->
+        <h3 class="grad-text" style="margin-top:var(--space-2xl);">Roadmap</h3>
+        <hr class="dw-separator">
+        <div class="roadmap">
+          <div class="roadmap-item">
+            <div class="phase">Q1 2026</div>
+            <div class="milestone">MVP launch — escrow and matching live</div>
+          </div>
+          <div class="roadmap-item">
+            <div class="phase">Q2 2026</div>
+            <div class="milestone">Governance protocols and token simulation</div>
+          </div>
+          <div class="roadmap-item">
+            <div class="phase">Q3 2026</div>
+            <div class="milestone">Token staking and referral rewards</div>
+          </div>
+          <div class="roadmap-item">
+            <div class="phase">Q4 2026</div>
+            <div class="milestone">Franchise and ERP token utility rollout</div>
+          </div>
+          <div class="roadmap-item">
+            <div class="phase">2027</div>
+            <div class="milestone">Global expansion, supply chain integration, tokenized governance</div>
+          </div>
+          <div class="roadmap-item">
+            <div class="phase">2028</div>
+            <div class="milestone">Optional tokenization of escrow and dispute resolution</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== OTHER VERSIONS ===================== -->
+  <div id="other-versions" class="page-section">
+    <section class="dw-section" aria-labelledby="versions-heading">
+      <h2 class="section-title" id="versions-heading">Other Versions</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">The basic building block for a fairer gig economy — across every vertical.</p>
+
+      <div class="versions-grid" style="margin-top:var(--space-xl);">
+        <div class="version-card glass grad-border glow-hover">
+          <h4 class="grad-text">Demandable Web Home Services</h4>
+          <p>The flagship deployment — verified home service professionals, smart escrow, and community governance for the $600B+ home services industry.</p>
+        </div>
+        <div class="version-card glass grad-border glow-hover">
+          <h4 class="grad-text">Demandable Web Professional Services</h4>
+          <p>Extended marketplace for legal, consulting, and specialized professional services. Blockchain-verified credentials and smart contract engagements.</p>
+        </div>
+        <div class="version-card glass grad-border glow-hover">
+          <h4 class="grad-text">Demandable Web Field Services</h4>
+          <p>On-site field service coordination with IoT integration, predictive maintenance triggers, and automated dispatch through smart contracts.</p>
+        </div>
+        <div class="version-card glass grad-border glow-hover">
+          <h4 class="grad-text">Demandable Web Freelance/Gig Services</h4>
+          <p>Decentralized gig economy marketplace. No platform exploitation, portable reputation, and fair pay through automated smart contract escrow.</p>
+        </div>
+        <div class="version-card glass grad-border glow-hover">
+          <h4 class="grad-text">Demandable Web NP/NFP Services</h4>
+          <p>Non-profit and not-for-profit fundraising and grant services. Transparent fund tracking, community governance, and token-based incentive models.</p>
+        </div>
+        <div class="version-card glass grad-border glow-hover">
+          <h4 class="grad-text">Demandable Web Personal Services</h4>
+          <p>Peer-to-peer personal services marketplace. Verified providers, transparent pricing, and smart contract protection for everyday service needs.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== METHODOLOGY ===================== -->
+  <div id="methodology" class="page-section">
+    <section class="dw-section" aria-labelledby="methodology-heading">
+      <h2 class="section-title" id="methodology-heading">Methodology</h2>
+      <hr class="dw-separator thick">
+
+      <div class="content-block">
+        <p class="tagline">We open-sourced the trust so you can focus on the task.</p>
+
+        <h3 class="grad-text">Progressive Development Strategy</h3>
+        <p>Our methodology prioritizes efficiency, innovation, and user experience through a phased development approach. We begin with deep research and market analysis, proceed through design and UX prototyping, integrate blockchain infrastructure, and culminate in rigorous testing and deployment — each phase building upon verified foundations.</p>
+
+        <h3 class="grad-text">AI-Augmented Development</h3>
+        <p>By leveraging detailed ideas and visions with premium agentic AI tools and technology, Demandable Web is poised to be launch-ready with our MVP ahead of schedule and at a fraction of traditional costs. AI assists not only in code generation but in matching algorithms, predictive analytics, and automated quality assurance.</p>
+
+        <h3 class="grad-text">Community-Driven Iteration</h3>
+        <p>We build with the community, not just for it. Feedback loops from early adopters, governance participants, and franchise partners drive continuous refinement. Our open-source approach ensures that every stakeholder can audit, contribute to, and shape the platform's evolution.</p>
+
+        <h3 class="grad-text">Modular Architecture</h3>
+        <p>Each module — Identity, Matching, Escrow, Reputation, IoT Sync — operates independently and scales independently. This modular design enables franchise partners to deploy vertical-specific configurations while maintaining the integrity of the core platform.</p>
+
+        <h3 class="grad-text">Collaboration Over Competition</h3>
+        <p>Our strategic doctrine identifies potential competitors as collaborative partners. We seek mutual benefit through co-marketing, technical integration, shared industry standards, and revenue-sharing models. A collaborative ecosystem creates more value than a competitive zero-sum game.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== SECURITY ===================== -->
+  <div id="about-security" class="page-section">
+    <section class="dw-section" aria-labelledby="security-heading">
+      <h2 class="section-title" id="security-heading">Security</h2>
+      <hr class="dw-separator thick">
+
+      <div class="content-block">
+        <p class="tagline">Secure your agreements in blocks, not red tape. Ironclad security without the learning curve.</p>
+
+        <h3 class="grad-text">Blockchain Identity Protection</h3>
+        <p>We utilize blockchain's immutable and decentralized nature to protect service professionals' personal identities. Zero-knowledge proofs and public-private key cryptography create a secure environment where professionals can confidently offer services without fear of identity theft or misuse of personal information.</p>
+
+        <h3 class="grad-text">Smart Contract Audits</h3>
+        <p>All token logic is externally verified through comprehensive smart contract audits. Every escrow mechanism, governance protocol, and payment flow is tested, verified, and published for community review. Trust is not claimed — it is proven.</p>
+
+        <h3 class="grad-text">KYC/AML Compliance</h3>
+        <p>Required for staking, governance, and large transfers. Our compliance framework ensures regulatory adherence while preserving user privacy through minimal data exposure principles. Only what is necessary is verified — nothing more.</p>
+
+        <h3 class="grad-text">Decentralized Dispute Resolution</h3>
+        <p>Smart contracts hold funds in escrow, and if a dispute arises, a decentralized panel of experts examines evidence and makes impartial decisions. This eliminates bias, ensures fair resolution, and further builds trust between service professionals and their clients.</p>
+
+        <h3 class="grad-text">Regulatory Flexibility</h3>
+        <p>Optional token layers accommodate jurisdictions with crypto restrictions. The platform operates with full functionality in both tokenized and non-tokenized environments, ensuring global accessibility regardless of local regulatory landscapes.</p>
+
+        <h3 class="grad-text">Data Sovereignty</h3>
+        <p>Keep your data yours. Keep your money yours. User data remains under user control through decentralized storage and encryption. No central authority can access, monetize, or exploit your information. Privacy is not a feature — it is a right.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== ABOUT MODUS-LOGIC ===================== -->
+  <div id="about-modus-logic" class="page-section">
+    <section class="dw-section" aria-labelledby="modus-heading">
+      <h2 class="section-title" id="modus-heading">About Modus-Logic</h2>
+      <hr class="dw-separator thick">
+
+      <div class="content-block">
+        <p class="tagline">The method behind the logic. The logic behind the method.</p>
+
+        <h3 class="grad-text">What is Modus-Logic?</h3>
+        <p>Modus-Logic is the operational and philosophical framework that underpins Demandable Web's approach to decentralized marketplace design. It represents the systematic methodology — the "modus" — combined with the rational, transparent, and community-driven logic that governs every decision, protocol, and feature within the platform.</p>
+
+        <h3 class="grad-text">Principles</h3>
+        <p>Modus-Logic operates on the principle that trust must be earned through verifiable action, not extracted through centralized control. Every protocol, every smart contract, every governance mechanism is designed to be auditable, transparent, and fair. The logic is simple: when everyone plays by the same rules, everyone benefits.</p>
+
+        <h3 class="grad-text">Application</h3>
+        <p>From reputation-weighted governance to smart contract escrow, from AI-driven matching to IoT-triggered service requests — every feature of Demandable Web is built through the Modus-Logic framework. This ensures consistency, reliability, and a coherent user experience that feels intuitive precisely because the underlying logic is sound.</p>
+
+        <h3 class="grad-text">Vision</h3>
+        <p>Modus-Logic extends beyond Demandable Web. It is a blueprint for how decentralized platforms should be conceived, built, and governed. By open-sourcing our methodology alongside our code, we invite the broader community to adopt, adapt, and improve upon the framework — making decentralized trust accessible to all.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== REACH OUT (CONTACT FORM) ===================== -->
+  <div id="reach-out" class="page-section">
+    <section class="dw-section" aria-labelledby="contact-heading">
+      <h2 class="section-title" id="contact-heading">Reach Out!</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">We'd love to hear from you. Select a topic, share your thoughts, and let's connect.</p>
+
+      <div class="contact-form-wrapper">
+        <form id="contact-form" class="glass grad-border" style="padding:var(--space-lg);" novalidate>
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" disabled selected>Select a subject...</option>
+              <option value="general-feedback">General Feedback</option>
+              <option value="development-question">Question about Development</option>
+              <option value="web3-question">Questions about Web3</option>
+              <option value="blockchain-jobs">Interested in Blockchain Jobs</option>
+              <option value="other-releases">Interested in Other Releases</option>
+              <option value="something-else">Something Else</option>
+            </select>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-md);">
+            <div class="form-group">
+              <label for="contact-fname">First Name</label>
+              <input type="text" id="contact-fname" name="firstName" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="contact-lname">Last Name</label>
+              <input type="text" id="contact-lname" name="lastName" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-employment">Employment</label>
+            <select id="contact-employment" name="employment">
+              <option value="" disabled selected>Select employment type...</option>
+              <option value="freelance">Freelance / Contractor</option>
+              <option value="employed-ft">Employed Full-Time</option>
+              <option value="employed-pt">Employed Part-Time</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-business">Business Name</label>
+            <input type="text" id="contact-business" name="businessName" autocomplete="organization">
+          </div>
+
+          <div class="form-group">
+            <label for="contact-content">Message <span style="font-weight:300; color:#888;">(max 750 characters)</span></label>
+            <textarea id="contact-content" name="content" maxlength="750" rows="5" required></textarea>
+            <div class="char-count" id="char-count">0/750</div>
+          </div>
+
+          <div class="captcha-box glass grad-border">
+            <input type="checkbox" id="captcha-check" name="captcha" required>
+            <label for="captcha-check" style="font-size:0.85rem; color:#b0b0c8; cursor:pointer;">I'm not a robot — verify to send</label>
+          </div>
+
+          <div style="text-align:center; margin-top:var(--space-md);">
+            <button type="submit" class="dw-btn dw-btn-primary">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PRIVACY POLICY ===================== -->
+  <div id="privacy" class="page-section">
+    <section class="dw-section" aria-labelledby="privacy-heading">
+      <h2 class="section-title" id="privacy-heading">Privacy Policy</h2>
+      <hr class="dw-separator thick">
+      <div class="legal-content">
+        <h3 class="grad-text">Our Commitment to Your Privacy</h3>
+        <p>At Demandable Web, privacy is not a feature — it is a fundamental right. Our privacy policy reflects our core philosophy: keep your data yours, keep your money yours.</p>
+        <h3 class="grad-text">Data Collection</h3>
+        <p>We collect only the minimum data necessary to provide our marketplace services. This includes identity verification data (processed through zero-knowledge proofs), transaction records (stored on-chain), and basic account information. We never sell, share, or monetize your personal data.</p>
+        <h3 class="grad-text">Data Storage</h3>
+        <p>Personal data is encrypted and stored using decentralized storage solutions. Blockchain transaction data is immutable and transparent by design. Your personal identifiers are never exposed on-chain — only cryptographic proofs of verification are recorded.</p>
+        <h3 class="grad-text">Your Rights</h3>
+        <ul>
+          <li>Right to access your personal data</li>
+          <li>Right to correction of inaccurate data</li>
+          <li>Right to deletion of your account and associated data</li>
+          <li>Right to data portability</li>
+          <li>Right to withdraw consent at any time</li>
+        </ul>
+        <h3 class="grad-text">Contact</h3>
+        <p>For privacy-related inquiries, contact us through our Reach Out form or email founders@demandableweb.com.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== LEGAL ===================== -->
+  <div id="legal" class="page-section">
+    <section class="dw-section" aria-labelledby="legal-heading">
+      <h2 class="section-title" id="legal-heading">Legal</h2>
+      <hr class="dw-separator thick">
+      <div class="legal-content">
+        <h3 class="grad-text">Terms of Service</h3>
+        <p>By using Demandable Web, you agree to our terms of service which govern the use of our decentralized marketplace platform. These terms are designed to protect all participants — homeowners, service professionals, franchise partners, and community members — through transparent, enforceable smart contracts.</p>
+        <h3 class="grad-text">Smart Contract Legal Framework</h3>
+        <p>All service agreements on Demandable Web are executed through audited smart contracts. These self-executing contracts carry the same legal weight as traditional agreements, with the added benefits of immutability, transparency, and automated enforcement.</p>
+        <h3 class="grad-text">Regulatory Compliance</h3>
+        <p>Demandable Web operates with full regulatory awareness. Our KYC/AML compliance framework ensures adherence to financial regulations. Our optional token layer design accommodates jurisdictions with cryptocurrency restrictions, ensuring global accessibility.</p>
+        <h3 class="grad-text">Dispute Resolution</h3>
+        <p>Disputes are resolved through our Decentralized Dispute Resolution Council — an elected body of top-rated community members who review evidence and render impartial decisions. All dispute proceedings are recorded on-chain for full transparency.</p>
+        <h3 class="grad-text">Intellectual Property</h3>
+        <p>The Demandable Web Core Edition is released under an open-source license. Enterprise and white-label deployments are governed by separate licensing agreements. All brand assets, trademarks, and proprietary modules are protected under applicable intellectual property laws.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== PARTNERS ===================== -->
+  <div id="partners" class="page-section">
+    <section class="dw-section" aria-labelledby="partners-heading">
+      <h2 class="section-title" id="partners-heading">Partners</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">Collaboration over competition — building the decentralized future together.</p>
+      <div class="content-block">
+        <h3 class="grad-text">Our Partner Philosophy</h3>
+        <p>Demandable Web's strategic doctrine of Collaboration Over Competition means we actively seek partnerships with emerging technologies and existing operations. We identify mutual benefits, develop compelling value propositions, and build technical integrations that create more value together than any single entity could alone.</p>
+        <h3 class="grad-text">Become a Partner</h3>
+        <p>Whether you're an established platform seeking blockchain integration, a technology provider exploring decentralized marketplaces, or a franchise partner ready to deploy in your vertical — we want to collaborate. Reach out through our contact form to explore partnership opportunities.</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-badge glass grad-border">
+          <div style="font-size:2rem; margin-bottom:0.25rem;" aria-hidden="true">&#x1F517;</div>
+          <div class="partner-name">Blockchain Infrastructure</div>
+        </div>
+        <div class="partner-badge glass grad-border">
+          <div style="font-size:2rem; margin-bottom:0.25rem;" aria-hidden="true">&#x1F916;</div>
+          <div class="partner-name">AI & ML Partners</div>
+        </div>
+        <div class="partner-badge glass grad-border">
+          <div style="font-size:2rem; margin-bottom:0.25rem;" aria-hidden="true">&#x1F4F1;</div>
+          <div class="partner-name">IoT Integrators</div>
+        </div>
+        <div class="partner-badge glass grad-border">
+          <div style="font-size:2rem; margin-bottom:0.25rem;" aria-hidden="true">&#x1F3E0;</div>
+          <div class="partner-name">Franchise Operators</div>
+        </div>
+        <div class="partner-badge glass grad-border">
+          <div style="font-size:2rem; margin-bottom:0.25rem;" aria-hidden="true">&#x2696;</div>
+          <div class="partner-name">Legal & Compliance</div>
+        </div>
+        <div class="partner-badge glass grad-border">
+          <div style="font-size:2rem; margin-bottom:0.25rem;" aria-hidden="true">&#x1F4B0;</div>
+          <div class="partner-name">ERP & B2B</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== ACCESSIBILITY ===================== -->
+  <div id="accessibility" class="page-section">
+    <section class="dw-section" aria-labelledby="access-heading">
+      <h2 class="section-title" id="access-heading">Accessibility</h2>
+      <hr class="dw-separator thick">
+      <div class="legal-content">
+        <h3 class="grad-text">Our Accessibility Commitment</h3>
+        <p>Demandable Web is designed for privacy, built for people, and accessible to all. We are committed to ensuring our platform is usable by everyone, regardless of ability, device, or technical expertise.</p>
+        <h3 class="grad-text">Zero-Knowledge UX</h3>
+        <p>Our built-in user-level experience selector ensures that no blockchain or cryptocurrency knowledge is required to use the platform. The interface looks, feels, and operates like any other app — removing technical barriers to entry for all users.</p>
+        <h3 class="grad-text">Web Content Accessibility Guidelines (WCAG)</h3>
+        <p>We strive to meet WCAG 2.1 AA standards across our platform, including semantic HTML structure, keyboard navigation support, screen reader compatibility, sufficient color contrast, and reduced-motion preferences.</p>
+        <h3 class="grad-text">Inclusive Design Principles</h3>
+        <ul>
+          <li>Recognize exclusion: Design for the full range of human diversity</li>
+          <li>Solve for one, extend to many: Accessibility features benefit everyone</li>
+          <li>Learn from diversity: User feedback from diverse communities drives improvement</li>
+          <li>Provide multiple ways to interact: Keyboard, mouse, voice, and assistive technology support</li>
+        </ul>
+        <h3 class="grad-text">Continuous Improvement</h3>
+        <p>Accessibility is an ongoing commitment, not a one-time achievement. We conduct regular audits, welcome community feedback, and continuously iterate to ensure every user can participate fully in the Demandable Web ecosystem.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="dw-footer" role="contentinfo">
+    <hr class="dw-separator thick">
+    <div class="footer-links">
+      <a href="#" data-page="privacy">Privacy Policy</a>
+      <a href="#" data-page="legal">Legal</a>
+      <a href="#" data-page="partners">Partners</a>
+      <a href="#" data-page="accessibility">Accessibility</a>
+    </div>
+    <p class="copyright">&copy; 2025 Demandable Web by Modus-Logic. All rights reserved.</p>
+  </footer>
+
+  <!-- ===================== BOTTOM NAVIGATION (Liquid Glass) ===================== -->
+  <nav class="bottom-nav" role="navigation" aria-label="Main navigation">
+    <div class="bottom-nav-inner">
+      <div class="nav-item active" data-page="home" tabindex="0" role="link">Home</div>
+
+      <div class="nav-item has-submenu" tabindex="0" role="link">
+        Core Edition ▾
+        <div class="submenu" role="menu">
+          <div class="submenu-item" data-page="core-features" role="menuitem" tabindex="0">Features</div>
+          <div class="submenu-item" data-page="core-benefits" role="menuitem" tabindex="0">Benefits</div>
+          <div class="submenu-item" data-page="core-license" role="menuitem" tabindex="0">License</div>
+        </div>
+      </div>
+
+      <div class="nav-item" data-page="faqs" tabindex="0" role="link">FAQ's</div>
+      <div class="nav-item" data-page="download" tabindex="0" role="link">Download Community Edition</div>
+      <div class="nav-item" data-page="download" tabindex="0" role="link">Download Spec Sheet</div>
+      <div class="nav-item" data-page="download" tabindex="0" role="link">Download User Guide</div>
+
+      <div class="nav-item has-submenu" tabindex="0" role="link">
+        About DW ▾
+        <div class="submenu" role="menu">
+          <div class="submenu-item" data-page="other-versions" role="menuitem" tabindex="0">Other Versions</div>
+          <div class="submenu-item" data-page="methodology" role="menuitem" tabindex="0">Methodology</div>
+          <div class="submenu-item" data-page="about-security" role="menuitem" tabindex="0">Security</div>
+          <div class="submenu-item" data-page="about-modus-logic" role="menuitem" tabindex="0">About Modus-Logic</div>
+        </div>
+      </div>
+
+      <div class="nav-item has-submenu" tabindex="0" role="link">
+        More ▾
+        <div class="submenu" role="menu">
+          <div class="submenu-item" data-page="reach-out" role="menuitem" tabindex="0">Reach Out!</div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Scroll to top">&#8593;</button>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
