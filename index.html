@@ -12,6 +12,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/podcasts.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+
+  <!-- Analytics configuration -->
+  <script>
+    /* Site-wide GA4 default. Paste your Measurement ID (G-XXXXXXXXXX) below,
+       or set it at runtime from the Admin & Analytics section, which stores
+       the value in this browser. */
+    window.DW_ANALYTICS = {
+      measurementId: '',
+      enabled: true,
+      anonymizeIp: true,
+      trackScrollDepth: true,
+      trackOutboundLinks: true,
+      trackPodcasts: true,
+      debug: false
+    };
+  </script>
 </head>
 <body>
   <a href="#main-content" class="sr-only">Skip to main content</a>
@@ -862,6 +879,140 @@
   </div>
 
   <!-- ===================== FOOTER ===================== -->
+  <!-- ===================== ADMIN ===================== -->
+  <div id="admin" class="page-section">
+    <section class="dw-section" aria-labelledby="admin-heading">
+      <h2 class="section-title" id="admin-heading">Admin &amp; Analytics</h2>
+      <hr class="dw-separator thick">
+      <p class="tagline">Measure what matters. Own your data.</p>
+
+      <!-- Gate -->
+      <div id="admin-gate" class="admin-gate glass grad-border">
+        <div class="admin-lock" aria-hidden="true">&#x1F512;</div>
+        <h3 class="grad-text">Restricted Area</h3>
+        <p class="admin-gate-copy">This console configures site analytics. Enter the administrator passphrase to continue.</p>
+        <form id="admin-login" class="admin-login" autocomplete="off">
+          <label class="sr-only" for="admin-pass">Administrator passphrase</label>
+          <input type="password" id="admin-pass" name="admin-pass" placeholder="Passphrase" autocomplete="current-password">
+          <button type="submit" class="dw-btn dw-btn-primary">Unlock Console</button>
+        </form>
+        <p id="admin-gate-msg" class="admin-msg" role="status" aria-live="polite"></p>
+        <p class="admin-note">Client-side gate for convenience only &mdash; it deters casual access but is not a security boundary. Keep sensitive credentials out of this page.</p>
+      </div>
+
+      <!-- Console -->
+      <div id="admin-console" class="admin-console" hidden>
+
+        <!-- Status -->
+        <div class="admin-card glass grad-border">
+          <div class="admin-card-head">
+            <h3 class="grad-text">Tracking Status</h3>
+            <span id="admin-status-pill" class="admin-pill">Checking&hellip;</span>
+          </div>
+          <dl class="admin-status-grid">
+            <div><dt>Measurement ID</dt><dd id="st-mid">&mdash;</dd></div>
+            <div><dt>Tag Loaded</dt><dd id="st-loaded">&mdash;</dd></div>
+            <div><dt>Collecting</dt><dd id="st-live">&mdash;</dd></div>
+            <div><dt>Consent</dt><dd id="st-consent">&mdash;</dd></div>
+            <div><dt>Queued Events</dt><dd id="st-queued">&mdash;</dd></div>
+            <div><dt>Current Path</dt><dd id="st-path">&mdash;</dd></div>
+          </dl>
+          <div class="admin-actions">
+            <button type="button" id="btn-refresh" class="dw-btn">Refresh Status</button>
+            <button type="button" id="btn-test" class="dw-btn dw-btn-primary">Send Test Event</button>
+          </div>
+          <p id="admin-test-msg" class="admin-msg" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Configuration -->
+        <div class="admin-card glass grad-border">
+          <h3 class="grad-text">Google Analytics 4 Configuration</h3>
+          <p class="admin-help">Paste the Measurement ID from your GA4 property (<strong>Admin &rarr; Data Streams &rarr; Web</strong>). It looks like <code>G-XXXXXXXXXX</code>. Settings save to this browser immediately &mdash; no redeploy required.</p>
+
+          <form id="admin-ga-form" class="admin-form" autocomplete="off">
+            <div class="form-group">
+              <label for="cfg-mid">Measurement ID</label>
+              <input type="text" id="cfg-mid" placeholder="G-XXXXXXXXXX" spellcheck="false">
+              <small id="mid-hint" class="admin-hint">Format: G- followed by at least 6 letters or digits.</small>
+            </div>
+
+            <div class="admin-toggles">
+              <label class="admin-toggle"><input type="checkbox" id="cfg-enabled"> <span>Enable analytics collection</span></label>
+              <label class="admin-toggle"><input type="checkbox" id="cfg-anon"> <span>Anonymize IP addresses</span></label>
+              <label class="admin-toggle"><input type="checkbox" id="cfg-podcasts"> <span>Track podcast playback &amp; milestones</span></label>
+              <label class="admin-toggle"><input type="checkbox" id="cfg-scroll"> <span>Track scroll depth</span></label>
+              <label class="admin-toggle"><input type="checkbox" id="cfg-outbound"> <span>Track outbound links &amp; file downloads</span></label>
+              <label class="admin-toggle"><input type="checkbox" id="cfg-debug"> <span>Debug mode (log every hit to console)</span></label>
+            </div>
+
+            <div class="admin-actions">
+              <button type="submit" class="dw-btn dw-btn-primary">Save Configuration</button>
+              <button type="button" id="btn-reset" class="dw-btn">Reset to Defaults</button>
+            </div>
+            <p id="admin-save-msg" class="admin-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- Consent -->
+        <div class="admin-card glass grad-border">
+          <h3 class="grad-text">Consent Mode</h3>
+          <p class="admin-help">Demandable Web ships with GA4 Consent Mode v2 and <code>analytics_storage</code> denied by default, so no analytics cookies are written until a visitor opts in. Advertising signals stay denied permanently.</p>
+          <div class="admin-actions">
+            <button type="button" id="btn-consent-grant" class="dw-btn dw-btn-primary">Grant Consent (this browser)</button>
+            <button type="button" id="btn-consent-deny" class="dw-btn">Deny Consent</button>
+          </div>
+          <p id="admin-consent-msg" class="admin-msg" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Events reference -->
+        <div class="admin-card glass grad-border">
+          <h3 class="grad-text">Events Being Tracked</h3>
+          <p class="admin-help">Every event below streams into GA4 automatically. Because this site is a single-page app, section changes are reported as virtual page views &mdash; standard GA4 would otherwise record only one view per visit.</p>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Event</th><th>Fires When</th><th>Key Parameters</th></tr></thead>
+              <tbody>
+                <tr><td><code>page_view</code></td><td>Any section navigation (virtual SPA view)</td><td>page_title, page_path, section_id</td></tr>
+                <tr><td><code>podcast_start</code></td><td>An episode begins playing</td><td>episode_title, episode_number, file_name</td></tr>
+                <tr><td><code>podcast_progress</code></td><td>Listener passes 25 / 50 / 75 / 90%</td><td>episode_title, percent_played</td></tr>
+                <tr><td><code>podcast_complete</code></td><td>An episode finishes</td><td>episode_title, episode_number</td></tr>
+                <tr><td><code>podcast_pause</code></td><td>Playback is paused mid-episode</td><td>episode_title, playback_seconds</td></tr>
+                <tr><td><code>podcast_download</code></td><td>&ldquo;Download M4A&rdquo; is clicked</td><td>episode_title, file_name</td></tr>
+                <tr><td><code>podcast_open_external</code></td><td>&ldquo;Open in Your Player&rdquo; is clicked</td><td>episode_title, file_name</td></tr>
+                <tr><td><code>cta_click</code></td><td>Any primary button or carousel CTA</td><td>cta_text, cta_target, location_section</td></tr>
+                <tr><td><code>form_start</code></td><td>Visitor focuses the contact form</td><td>form_id</td></tr>
+                <tr><td><code>form_submit</code></td><td>Contact form is submitted</td><td>form_id, subject</td></tr>
+                <tr><td><code>faq_open</code></td><td>An FAQ item is expanded</td><td>question</td></tr>
+                <tr><td><code>file_download</code></td><td>A PDF, ZIP or media file link is clicked</td><td>file_name, file_extension</td></tr>
+                <tr><td><code>click_outbound</code></td><td>A link to another domain is clicked</td><td>link_domain, link_url</td></tr>
+                <tr><td><code>scroll_depth</code></td><td>Visitor reaches 25 / 50 / 75 / 90%</td><td>percent_scrolled, section_id</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Setup guide -->
+        <div class="admin-card glass grad-border">
+          <h3 class="grad-text">Setup Guide</h3>
+          <ol class="admin-steps">
+            <li>Sign in at <strong>analytics.google.com</strong> and create a GA4 property for <code>demandableweb.io</code>.</li>
+            <li>Open <strong>Admin &rarr; Data Streams &rarr; Web</strong> and add a stream for your domain.</li>
+            <li>Copy the <strong>Measurement ID</strong> (<code>G-XXXXXXXXXX</code>) shown at the top right of the stream details.</li>
+            <li>Paste it into the Configuration card above and choose <strong>Save Configuration</strong>.</li>
+            <li>Select <strong>Send Test Event</strong>, then confirm it appears in GA4 under <strong>Reports &rarr; Realtime</strong> within about thirty seconds.</li>
+            <li>For a permanent site-wide default, set the same ID in the <code>DW_ANALYTICS</code> block inside <code>index.html</code> and redeploy.</li>
+          </ol>
+          <p class="admin-help">Recommended in GA4: mark <code>podcast_complete</code>, <code>form_submit</code> and <code>podcast_download</code> as key events (Admin &rarr; Events) so they surface as conversions in your reports.</p>
+        </div>
+
+        <div class="admin-actions admin-signout">
+          <button type="button" id="btn-lock" class="dw-btn">Lock Console</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
   <footer class="dw-footer" role="contentinfo">
     <hr class="dw-separator thick">
     <div class="footer-links">
@@ -908,6 +1059,7 @@
         <div class="submenu" role="menu">
           <div class="submenu-item" data-page="home" data-scroll="podcasts" role="menuitem" tabindex="0">Deep Dive Podcasts</div>
           <div class="submenu-item" data-page="reach-out" role="menuitem" tabindex="0">Reach Out!</div>
+          <div class="submenu-item" data-page="admin" role="menuitem" tabindex="0">Admin &amp; Analytics</div>
         </div>
       </div>
     </div>
@@ -916,6 +1068,8 @@
   <!-- Scroll to Top -->
   <button class="scroll-top" aria-label="Scroll to top">&#8593;</button>
 
+  <script src="assets/js/analytics.js"></script>
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/admin.js"></script>
 </body>
 </html>

@@ -107,6 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Report the virtual page view to GA4. This SPA swaps sections without a
+    // document reload, so analytics needs an explicit hit per navigation.
+    if (window.DWAnalytics && typeof window.DWAnalytics.trackPageView === 'function') {
+      window.DWAnalytics.trackPageView(pageId, scrollToId);
+    }
   }
 
   // Plain links (not nav/submenu/footer items, which are wired below) that
