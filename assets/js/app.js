@@ -88,34 +88,56 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerLinks = document.querySelectorAll('.footer-links a[data-page]');
   const carouselCTAs = document.querySelectorAll('.carousel-cta a[data-page]');
 
-  function showPage(pageId) {
+  function showPage(pageId, scrollToId) {
     pageSections.forEach(s => s.classList.remove('active'));
     const target = document.getElementById(pageId);
     if (target) target.classList.add('active');
     navItems.forEach(n => n.classList.toggle('active', n.dataset.page === pageId));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    if (scrollToId) {
+      // Let the section become visible before measuring its position.
+      requestAnimationFrame(() => {
+        const anchor = document.getElementById(scrollToId);
+        if (anchor) {
+          anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
+
+  // Plain links (not nav/submenu/footer items, which are wired below) that
+  // carry data-scroll: switch page, then smooth-scroll to the anchor.
+  document.querySelectorAll('a[data-scroll]:not(.footer-links a)').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPage(el.dataset.page || 'home', el.dataset.scroll);
+    });
+  });
 
   navItems.forEach(item => {
     item.addEventListener('click', (e) => {
-      if (item.dataset.page) { e.preventDefault(); showPage(item.dataset.page); }
+      if (item.dataset.page) { e.preventDefault(); showPage(item.dataset.page, item.dataset.scroll); }
     });
     item.addEventListener('keydown', (e) => {
-      if ((e.key === 'Enter' || e.key === ' ') && item.dataset.page) { e.preventDefault(); showPage(item.dataset.page); }
+      if ((e.key === 'Enter' || e.key === ' ') && item.dataset.page) { e.preventDefault(); showPage(item.dataset.page, item.dataset.scroll); }
     });
   });
 
   document.querySelectorAll('.submenu-item[data-page]').forEach(item => {
-    item.addEventListener('click', (e) => { e.stopPropagation(); if (item.dataset.page) showPage(item.dataset.page); });
-    item.addEventListener('keydown', (e) => { if ((e.key === 'Enter' || e.key === ' ') && item.dataset.page) { e.stopPropagation(); e.preventDefault(); showPage(item.dataset.page); } });
+    item.addEventListener('click', (e) => { e.stopPropagation(); if (item.dataset.page) showPage(item.dataset.page, item.dataset.scroll); });
+    item.addEventListener('keydown', (e) => { if ((e.key === 'Enter' || e.key === ' ') && item.dataset.page) { e.stopPropagation(); e.preventDefault(); showPage(item.dataset.page, item.dataset.scroll); } });
   });
 
   footerLinks.forEach(link => {
-    link.addEventListener('click', (e) => { e.preventDefault(); if (link.dataset.page) showPage(link.dataset.page); });
+    link.addEventListener('click', (e) => { e.preventDefault(); if (link.dataset.page) showPage(link.dataset.page, link.dataset.scroll); });
   });
 
   carouselCTAs.forEach(link => {
-    link.addEventListener('click', (e) => { e.preventDefault(); if (link.dataset.page) showPage(link.dataset.page); });
+    link.addEventListener('click', (e) => { e.preventDefault(); if (link.dataset.page) showPage(link.dataset.page, link.dataset.scroll); });
   });
 
   // --- FAQ Accordion ---

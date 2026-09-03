@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/podcasts.css">
 </head>
 <body>
   <a href="#main-content" class="sr-only">Skip to main content</a>
@@ -144,6 +145,73 @@
           <h3 class="grad-text">Multi-Stream Resilience</h3>
           <p>Marketplace fees, franchise licensing, data licensing, token utility — modular, scalable, and margin-rich revenue streams.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Deep Dive Podcasts -->
+    <section class="dw-section podcasts-section" id="podcasts" aria-labelledby="home-podcasts-heading">
+      <h2 class="section-title" id="home-podcasts-heading">Deep Dive Podcasts</h2>
+      <hr class="dw-separator">
+      <p class="tagline">Complex tech, made demandable — in your ears.</p>
+      <p class="podcasts-intro">Press play to stream any episode right here, or open it in your system’s audio player. Every episode is a plain-language deep dive into how Demandable Web works and why it matters.</p>
+      <div class="podcast-grid">
+        <article class="podcast-card glass grad-border glow-hover">
+          <div class="podcast-index">Episode 01 <span class="podcast-dot" aria-hidden="true">&bull;</span> 23 min</div>
+          <h3 class="podcast-title grad-text">Demandable Web’s Decentralized Home Service Revolution</h3>
+          <p class="podcast-desc">How a decentralized marketplace rebuilds the $600B+ home services industry around verified trust, smart escrow, and community governance — instead of middlemen and markups.</p>
+          <div class="podcast-player">
+            <audio controls preload="metadata" src="assets/podcasts/deep-dive-1-decentralized-home-service-revolution.m4a">
+              Your browser does not support inline audio playback.
+              <a href="assets/podcasts/deep-dive-1-decentralized-home-service-revolution.m4a">Stream or download this episode</a> to listen in your preferred player.
+            </audio>
+          </div>
+          <div class="podcast-actions">
+            <a class="podcast-link" href="assets/podcasts/deep-dive-1-decentralized-home-service-revolution.m4a" target="_blank" rel="noopener">
+              <span aria-hidden="true">&#x25B6;</span> Open in Your Player
+            </a>
+            <a class="podcast-link secondary" href="assets/podcasts/deep-dive-1-decentralized-home-service-revolution.m4a" download>
+              <span aria-hidden="true">&#x2B07;</span> Download M4A
+            </a>
+          </div>
+        </article>
+        <article class="podcast-card glass grad-border glow-hover">
+          <div class="podcast-index">Episode 02 <span class="podcast-dot" aria-hidden="true">&bull;</span> 23 min</div>
+          <h3 class="podcast-title grad-text">Web3 Fixes the Home Service Trust Crisis</h3>
+          <p class="podcast-desc">One in five home service transactions ends in dispute or fraud. This deep dive unpacks how cryptographic identity, immutable records, and transparent reputation solve the trust crisis at its root.</p>
+          <div class="podcast-player">
+            <audio controls preload="metadata" src="assets/podcasts/deep-dive-2-web3-fixes-the-trust-crisis.m4a">
+              Your browser does not support inline audio playback.
+              <a href="assets/podcasts/deep-dive-2-web3-fixes-the-trust-crisis.m4a">Stream or download this episode</a> to listen in your preferred player.
+            </audio>
+          </div>
+          <div class="podcast-actions">
+            <a class="podcast-link" href="assets/podcasts/deep-dive-2-web3-fixes-the-trust-crisis.m4a" target="_blank" rel="noopener">
+              <span aria-hidden="true">&#x25B6;</span> Open in Your Player
+            </a>
+            <a class="podcast-link secondary" href="assets/podcasts/deep-dive-2-web3-fixes-the-trust-crisis.m4a" download>
+              <span aria-hidden="true">&#x2B07;</span> Download M4A
+            </a>
+          </div>
+        </article>
+        <article class="podcast-card glass grad-border glow-hover">
+          <div class="podcast-index">Episode 03 <span class="podcast-dot" aria-hidden="true">&bull;</span> 22 min</div>
+          <h3 class="podcast-title grad-text">Replacing Predatory Aggregators with Demandable Web</h3>
+          <p class="podcast-desc">Lead-generation platforms take up to half of a professional’s earnings. Here’s how portable reputation, fair pricing, and direct peer-to-peer agreements end the extraction model for good.</p>
+          <div class="podcast-player">
+            <audio controls preload="metadata" src="assets/podcasts/deep-dive-3-replacing-predatory-aggregators.m4a">
+              Your browser does not support inline audio playback.
+              <a href="assets/podcasts/deep-dive-3-replacing-predatory-aggregators.m4a">Stream or download this episode</a> to listen in your preferred player.
+            </audio>
+          </div>
+          <div class="podcast-actions">
+            <a class="podcast-link" href="assets/podcasts/deep-dive-3-replacing-predatory-aggregators.m4a" target="_blank" rel="noopener">
+              <span aria-hidden="true">&#x25B6;</span> Open in Your Player
+            </a>
+            <a class="podcast-link secondary" href="assets/podcasts/deep-dive-3-replacing-predatory-aggregators.m4a" download>
+              <span aria-hidden="true">&#x2B07;</span> Download M4A
+            </a>
+          </div>
+        </article>
       </div>
     </section>
   </div>
@@ -797,6 +865,7 @@
   <footer class="dw-footer" role="contentinfo">
     <hr class="dw-separator thick">
     <div class="footer-links">
+      <a href="#" data-page="home" data-scroll="podcasts">Deep Dive Podcasts</a>
       <a href="#" data-page="privacy">Privacy Policy</a>
       <a href="#" data-page="legal">Legal</a>
       <a href="#" data-page="partners">Partners</a>
@@ -837,6 +906,7 @@
       <div class="nav-item has-submenu" tabindex="0" role="link">
         More ▾
         <div class="submenu" role="menu">
+          <div class="submenu-item" data-page="home" data-scroll="podcasts" role="menuitem" tabindex="0">Deep Dive Podcasts</div>
           <div class="submenu-item" data-page="reach-out" role="menuitem" tabindex="0">Reach Out!</div>
         </div>
       </div>
